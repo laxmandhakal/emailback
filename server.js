@@ -50,10 +50,10 @@ app.use(function(err, req, res, next) {
     res.status(404).json(err)
 
 })
-app.listen(9000, function(err, done) {
+app.listen(process.env.PORT || 8080, function(err, done) {
     if (err) {
         console.log(err)
     } else {
-        console.log('listening at port 9000')
+        console.log('listening at port 8080')
     }
 })
